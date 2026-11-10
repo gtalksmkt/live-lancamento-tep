@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Live de lançamento do Preparatório TEP · Ped Talks</title>
+<meta name="description" content="Live TEP sem mistério: como iniciar sua preparação para o título de especialista em pediatria. Quarta, 18/11, às 19h30, com Rebecca Azulay e Natália Dias. Inscreva-se.">
+<meta name="theme-color" content="#040405">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Live: TEP sem mistério · Quarta, 18/11, 19h30">
+<meta property="og:description" content="Como iniciar sua preparação para o título de especialista em pediatria. Com Rebecca Azulay e Natália Dias.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/professoras.jpg">
+<link rel="icon" href="img/logo-pedtalks.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#040405;--bg2:#0A0F1A;--blue:#0074F2;--blue2:#2A8CFF;--blue-l:#5AA6FF;--sky:#8CC6FF;
+  --text:#F6F6F7;--muted:#B4B8C2;--dim:#7E838E;--live:#FF3B4E;--ok:#3DDC97;
+  --line:rgba(90,166,255,.22);--glass:rgba(14,22,38,.72);
+  --f:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font-family:var(--f);line-height:1.35;letter-spacing:-.01em;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto;position:relative}
+.ico{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.grad{background:linear-gradient(100deg,#0074F2 0%,#3D9BFF 45%,#8CC6FF 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.08em}
+
+/* ---------- fundo vivo ---------- */
+.fx{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.fx::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(900px 600px at 80% -5%,rgba(0,116,242,.30),transparent 65%),
+  radial-gradient(700px 500px at -10% 30%,rgba(0,86,190,.20),transparent 70%)}
+.fx::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(90,166,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(90,166,255,.05) 1px,transparent 1px);background-size:72px 72px;-webkit-mask-image:linear-gradient(#000,transparent 70%);mask-image:linear-gradient(#000,transparent 70%)}
+.dot{position:absolute;width:4px;height:4px;border-radius:50%;background:var(--blue-l);opacity:0;animation:tw 6s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:0;transform:translateY(0)}50%{opacity:.55;transform:translateY(-18px)}}
+main,header,footer,.bar{position:relative;z-index:1}
+
+/* ---------- topo ---------- */
+.top{display:flex;align-items:center;justify-content:space-between;padding:22px 0 8px}
+.top img{height:46px;width:auto}
+.pill-live{display:inline-flex;align-items:center;gap:10px;padding:9px 18px;border-radius:999px;border:1.5px solid rgba(255,59,78,.55);background:rgba(255,59,78,.1);font-weight:800;letter-spacing:.16em;font-size:13px;color:#E8E9EE;text-transform:uppercase}
+.rec{width:11px;height:11px;border-radius:50%;background:var(--live);box-shadow:0 0 0 0 rgba(255,59,78,.7);animation:rec 1.6s infinite;flex:none}
+@keyframes rec{0%{box-shadow:0 0 0 0 rgba(255,59,78,.65)}70%{box-shadow:0 0 0 14px rgba(255,59,78,0)}100%{box-shadow:0 0 0 0 rgba(255,59,78,0)}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:10px 0 56px}
+.hero-bg{position:absolute;inset:-80px 0 0 0;z-index:-1;overflow:hidden;pointer-events:none}
+.hero-bg img{position:absolute;right:-8%;top:0;width:min(900px,95vw);opacity:.30;filter:saturate(.7) hue-rotate(-6deg) brightness(.9);-webkit-mask-image:radial-gradient(closest-side,#000 25%,transparent 100%);mask-image:radial-gradient(closest-side,#000 25%,transparent 100%);transform:translateY(var(--py,0px))}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,var(--bg) 100%)}
+.hero-grid{display:grid;gap:26px;grid-template-areas:"copy" "form" "photo"}
+.copy{grid-area:copy;padding-top:14px}
+.kick{display:inline-flex;align-items:center;gap:11px;font-weight:700;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-l)}
+h1{font-weight:900;letter-spacing:-.045em;line-height:.98;font-size:clamp(46px,12.5vw,92px);margin:18px 0 16px}
+h1 .l{display:block;overflow:hidden}
+h1 .l>span{display:inline-block;animation:up .9s cubic-bezier(.2,.8,.2,1) both}
+h1 .l:nth-child(2)>span{animation-delay:.12s}
+@keyframes up{from{transform:translateY(105%)}to{transform:none}}
+.sub{font-size:clamp(18px,4.6vw,24px);color:var(--muted);max-width:560px;font-weight:500}
+.sub b{color:var(--text);font-weight:700}
+.when{display:flex;align-items:center;gap:16px;margin-top:26px;flex-wrap:wrap}
+.cal{width:86px;border-radius:16px;overflow:hidden;background:#0C1220;border:1px solid var(--line);box-shadow:0 0 38px rgba(0,116,242,.35);text-align:center;flex:none}
+.cal i{display:block;font-style:normal;background:linear-gradient(180deg,#2F90FF,#0066D6);font-weight:800;font-size:12px;letter-spacing:.18em;padding:6px 0}
+.cal b{display:block;font-size:44px;font-weight:900;letter-spacing:-.05em;line-height:1.05;padding:3px 0 6px}
+.when-txt{display:grid;gap:4px}
+.when-txt .d{font-weight:800;font-size:clamp(20px,5vw,26px);letter-spacing:.04em;text-transform:uppercase}
+.when-txt .h{font-weight:900;font-size:clamp(40px,10vw,56px);letter-spacing:-.05em;line-height:1;color:#fff;text-shadow:0 0 30px rgba(42,140,255,.8)}
+.when-txt .h em{font-style:normal;color:var(--blue-l)}
+
+/* ---------- contagem ---------- */
+.count{display:flex;gap:10px;margin-top:26px;max-width:460px}
+.count div{flex:1;text-align:center;border:1px solid var(--line);background:rgba(10,16,28,.7);border-radius:16px;padding:12px 4px 10px;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.count b{display:block;font-size:clamp(28px,8vw,38px);font-weight:900;letter-spacing:-.04em;font-variant-numeric:tabular-nums;line-height:1}
+.count span{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);font-weight:700}
+.count.done{display:block;text-align:center;padding:16px;border:1px solid rgba(255,59,78,.5);background:rgba(255,59,78,.1);border-radius:16px;font-weight:800}
+
+/* ---------- formulário ---------- */
+.form-card{grid-area:form;position:relative;border-radius:28px;padding:26px 22px 24px;background:linear-gradient(180deg,rgba(18,28,48,.92),rgba(8,12,22,.94));border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 80px rgba(0,116,242,.22);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);scroll-margin-top:16px}
+.form-card::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1.5px;background:conic-gradient(from var(--a,0deg),transparent 0 70%,rgba(90,166,255,.95) 85%,transparent 100%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:spin 5s linear infinite;pointer-events:none}
+@property --a{syntax:'<angle>';inherits:false;initial-value:0deg}
+@keyframes spin{to{--a:360deg}}
+.form-card h2{font-size:clamp(25px,6.4vw,31px);font-weight:900;letter-spacing:-.04em;line-height:1.05}
+.form-card .lead{color:var(--muted);margin:8px 0 20px;font-size:15.5px}
+.field{display:block;margin-bottom:14px}
+.field>span{display:block;font-size:13px;font-weight:700;letter-spacing:.04em;color:var(--muted);margin-bottom:7px}
+.ctl{position:relative;display:flex;align-items:center}
+.ctl>.ico{position:absolute;left:16px;font-size:19px;color:var(--dim);pointer-events:none;transition:color .2s}
+.ctl input,.ctl select{width:100%;height:56px;border-radius:16px;border:1.5px solid rgba(126,131,142,.35);background:rgba(4,6,12,.75);color:var(--text);font:600 17px/1 var(--f);padding:0 46px 0 48px;outline:none;transition:border-color .2s,box-shadow .2s,background .2s;appearance:none;-webkit-appearance:none}
+.ctl select{cursor:pointer}
+.ctl select:invalid{color:var(--dim)}
+.ctl select option{color:#111;background:#fff}
+.ctl input::placeholder{color:#5F6470;font-weight:500}
+.ctl input:focus,.ctl select:focus{border-color:var(--blue2);box-shadow:0 0 0 4px rgba(0,116,242,.22);background:rgba(6,10,20,.95)}
+.ctl:focus-within>.ico{color:var(--blue-l)}
+.ctl .chev{left:auto;right:16px}
+.ctl .okmark{position:absolute;right:14px;width:26px;height:26px;border-radius:50%;background:var(--ok);display:grid;place-items:center;color:#04140D;transform:scale(0);transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.ctl .okmark .ico{position:static;color:#04140D;font-size:15px;stroke-width:3.4}
+.field.valid .okmark{transform:scale(1)}
+.field.valid input,.field.valid select{border-color:rgba(61,220,151,.55)}
+.field.valid>.ctl>.ico:first-child{color:var(--ok)}
+.field.valid .chev{opacity:0}
+.field.bad input,.field.bad select{border-color:rgba(255,59,78,.7)}
+.msg{display:none;color:#FF8A96;font-size:13px;font-weight:600;margin-top:6px}
+.field.bad .msg{display:block}
+.chk{display:flex;gap:12px;align-items:flex-start;margin:4px 0 18px;cursor:pointer;font-size:14px;color:var(--muted);line-height:1.4}
+.chk input{position:absolute;opacity:0;pointer-events:none}
+.chk .box{width:24px;height:24px;border-radius:8px;border:1.5px solid rgba(126,131,142,.5);background:rgba(4,6,12,.75);display:grid;place-items:center;flex:none;margin-top:1px;transition:.2s;color:transparent}
+.chk .box .ico{font-size:15px;stroke-width:3.4}
+.chk input:checked+.box{background:var(--blue);border-color:var(--blue2);color:#fff;box-shadow:0 0 18px rgba(0,116,242,.6)}
+.chk input:focus-visible+.box{box-shadow:0 0 0 4px rgba(0,116,242,.3)}
+.hp{position:absolute!important;left:-9999px;opacity:0;height:0;width:0}
+
+.prog{height:5px;border-radius:5px;background:rgba(126,131,142,.22);overflow:hidden;margin:2px 0 14px}
+.prog i{display:block;height:100%;width:0;border-radius:5px;background:linear-gradient(90deg,#0074F2,#8CC6FF);transition:width .45s cubic-bezier(.2,.8,.2,1);box-shadow:0 0 14px rgba(42,140,255,.8)}
+.btn{position:relative;overflow:hidden;width:100%;height:64px;border:0;border-radius:999px;font:800 19px/1 var(--f);letter-spacing:-.01em;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:12px;background:linear-gradient(135deg,#2F90FF,#0057C4);box-shadow:0 0 44px rgba(0,116,242,.65),inset 0 0 0 1.5px rgba(255,255,255,.25);transition:transform .15s,box-shadow .25s,filter .25s}
+.btn .ico{font-size:22px;stroke-width:2.6;transition:transform .25s}
+.btn::after{content:"";position:absolute;top:0;bottom:0;width:90px;left:-120px;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-18deg);animation:shine 2.8s ease-in-out infinite}
+@keyframes shine{0%,55%{left:-120px}100%{left:120%}}
+.btn:not(:disabled):hover{transform:translateY(-2px);box-shadow:0 0 64px rgba(0,116,242,.85),inset 0 0 0 1.5px rgba(255,255,255,.3)}
+.btn:not(:disabled):hover .ico{transform:translateX(4px)}
+.btn:not(:disabled):active{transform:scale(.98)}
+.btn:not(:disabled){animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{filter:brightness(1)}50%{filter:brightness(1.12)}}
+.btn:disabled{cursor:not-allowed;background:#161B26;color:#7E838E;box-shadow:inset 0 0 0 1.5px rgba(126,131,142,.28);animation:none}
+.btn:disabled::after{display:none}
+.btn:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+.hint{text-align:center;color:var(--dim);font-size:13px;margin-top:12px;min-height:18px}
+.err{display:none;margin-top:12px;padding:12px 14px;border-radius:14px;background:rgba(255,59,78,.12);border:1px solid rgba(255,59,78,.4);color:#FFB0B8;font-size:14px;font-weight:600}
+.err.on{display:block}
+
+/* sucesso */
+.ok-card{display:none;text-align:center;padding:10px 0 4px}
+.ok-card.on{display:block;animation:pop .6s cubic-bezier(.2,1.2,.4,1) both}
+@keyframes pop{from{opacity:0;transform:scale(.92) translateY(10px)}to{opacity:1;transform:none}}
+.ok-badge{width:84px;height:84px;margin:4px auto 16px;border-radius:50%;background:linear-gradient(135deg,#2F90FF,#0057C4);display:grid;place-items:center;box-shadow:0 0 60px rgba(0,116,242,.8);font-size:42px}
+.ok-badge .ico{stroke-width:3}
+.ok-card h3{font-size:30px;font-weight:900;letter-spacing:-.04em;line-height:1.05}
+.ok-card p{color:var(--muted);margin:10px 0 18px;font-size:16px}
+.ok-card p b{color:#fff}
+.ok-when{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;background:rgba(0,116,242,.16);border:1px solid var(--line);font-weight:800;margin-bottom:18px}
+.ok-actions{display:grid;gap:10px}
+.btn2{display:flex;align-items:center;justify-content:center;gap:10px;height:54px;border-radius:999px;border:1.5px solid var(--line);background:rgba(10,16,28,.8);color:var(--text);font:700 16px/1 var(--f);text-decoration:none;cursor:pointer;transition:.2s}
+.btn2:hover{border-color:var(--blue2);background:rgba(0,116,242,.18)}
+.btn2[hidden]{display:none}
+.btn2.wa{background:#12B76A;border-color:#12B76A;color:#031A0E}
+.btn2.wa:hover{filter:brightness(1.1)}
+#confete{position:fixed;inset:0;pointer-events:none;z-index:60}
+
+/* ---------- foto delas ---------- */
+.photo{grid-area:photo;position:relative}
+.duo{position:relative;border-radius:28px;overflow:hidden;border:1px solid var(--line);box-shadow:0 0 80px rgba(0,116,242,.28);aspect-ratio:820/720;background:#0B2448}
+.duo img{width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.02)}
+.duo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 52%,rgba(4,4,5,.92) 100%)}
+.tags{position:absolute;left:12px;right:12px;bottom:12px;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tag{padding:11px 13px;border-radius:15px;background:rgba(6,10,20,.72);border:1px solid var(--line);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.tag b{display:block;font-size:clamp(14px,3.7vw,18px);font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.tag span{display:block;font-size:clamp(11px,2.9vw,13px);color:var(--sky);font-weight:600;margin-top:3px}
+.live-chip{position:absolute;top:14px;left:14px;z-index:2}
+
+/* ---------- seções ---------- */
+section{position:relative;padding:60px 0}
+.eyebrow{display:flex;align-items:center;gap:10px;font-weight:800;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-l);margin-bottom:12px}
+h2.t{font-size:clamp(34px,8.6vw,60px);font-weight:900;letter-spacing:-.045em;line-height:1}
+.items{display:grid;gap:12px;margin-top:30px}
+.item{display:flex;gap:16px;align-items:center;padding:16px 18px;border-radius:20px;border:1.5px solid var(--line);background:linear-gradient(135deg,rgba(0,116,242,.16),rgba(8,12,22,.7));transition:transform .25s,border-color .25s,box-shadow .25s}
+.item:hover{transform:translateY(-3px);border-color:rgba(90,166,255,.6);box-shadow:0 14px 40px rgba(0,116,242,.25)}
+.item .ib{width:54px;height:54px;border-radius:16px;background:linear-gradient(135deg,#2F90FF,#0057C4);display:grid;place-items:center;font-size:27px;flex:none;box-shadow:0 0 26px rgba(0,116,242,.5)}
+.item h3{font-size:clamp(18px,4.6vw,22px);font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.item p{color:var(--muted);font-size:15px;margin-top:3px}
+.guide{display:grid;gap:14px;margin-top:30px}
+.prof{display:flex;gap:18px;align-items:center;padding:18px;border-radius:24px;border:1.5px solid var(--line);background:linear-gradient(135deg,rgba(0,116,242,.14),rgba(8,12,22,.7))}
+.prof img{width:112px;height:112px;border-radius:50%;object-fit:cover;border:3px solid var(--blue2);box-shadow:0 0 34px rgba(0,116,242,.55);flex:none;background:#0B2448}
+.prof h3{font-size:clamp(22px,5.4vw,28px);font-weight:900;letter-spacing:-.04em;line-height:1.05}
+.prof .role{color:var(--sky);font-weight:700;margin:4px 0 8px}
+.prof .crm{display:inline-flex;gap:8px;align-items:center;font-size:12.5px;font-weight:700;color:var(--muted);padding:7px 13px;border-radius:14px;background:rgba(4,6,12,.7);border:1px solid var(--line);line-height:1.3}
+.prof .crm .ico{color:var(--ok);font-size:15px;stroke-width:3}
+.rqe{margin-top:16px;display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;background:var(--blue);font-weight:800;box-shadow:0 0 30px rgba(0,116,242,.6)}
+
+.final{text-align:center;padding:70px 0 90px;overflow:hidden}
+.final .bgimg{position:absolute;inset:0;z-index:-1;opacity:.28;background:url(img/ped-1-estetoscopio.webp) center/cover;filter:saturate(.7);-webkit-mask-image:linear-gradient(180deg,transparent,#000 35%,#000 65%,transparent);mask-image:linear-gradient(180deg,transparent,#000 35%,#000 65%,transparent)}
+.final h2{font-size:clamp(38px,10vw,72px);font-weight:900;letter-spacing:-.05em;line-height:1}
+.final p{color:var(--muted);font-size:clamp(17px,4.4vw,21px);margin:14px auto 28px;max-width:520px}
+.final .btn{max-width:420px;margin-inline:auto}
+footer{padding:30px 0 120px;text-align:center;color:var(--dim);font-size:13px;border-top:1px solid rgba(126,131,142,.15)}
+footer img{height:38px;margin:0 auto 12px;opacity:.9}
+
+/* barra fixa no celular */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(180deg,transparent,rgba(4,4,5,.92) 40%);transform:translateY(120%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.bar.on{transform:none}
+.bar a{display:flex;align-items:center;justify-content:center;gap:10px;height:56px;border-radius:999px;text-decoration:none;font-weight:800;font-size:17px;background:linear-gradient(135deg,#2F90FF,#0057C4);box-shadow:0 0 40px rgba(0,116,242,.7)}
+
+/* entrada ao rolar */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+
+/* ---------- desktop ---------- */
+@media (min-width:900px){
+  .top{padding-top:28px}
+  .hero{padding:24px 0 80px}
+  .hero-grid{grid-template-columns:1.1fr .9fr;grid-template-areas:"copy form" "photo form";column-gap:56px;row-gap:34px;align-items:start}
+  .form-card{position:sticky;top:20px;padding:34px 32px 30px}
+  .items{grid-template-columns:repeat(2,1fr)}
+  .item:last-child{grid-column:1/-1}
+  .guide{grid-template-columns:1fr 1fr}
+  .prof{flex-direction:column;text-align:center;padding:26px 22px}
+  .prof img{width:150px;height:150px}
+  .bar{display:none}
+}
+@media (max-width:360px){.prof img{width:88px;height:88px}.tags{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- ícones -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-steth" viewBox="0 0 24 24"><path d="M6 3v6a4 4 0 0 0 8 0V3"/><path d="M10 13v2a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="11" r="2"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-clip" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="3"/><path d="M9 4V3h6v1M9 13l2.2 2.2L15.5 11"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></symbol>
+  <symbol id="i-grow" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3.5"/><path d="m10 9.5 5 2.5-5 2.5z" fill="currentColor"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m8.5 14 -1.5 7 5-3 5 3-1.5-7"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v12M6 11l6 6 6-6M5 21h14"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M3 21l1.6-4.6A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-2-2-1-1 .8a4 4 0 0 1-2-2l.8-1-1-2z"/></symbol>
+</svg>
+
+<div class="fx" id="fx" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap top">
+    <img src="img/logo-pedtalks.png" alt="Ped Talks" width="120" height="46">
+    <span class="pill-live"><i class="rec"></i>Live</span>
+  </div>
+</header>
+
+<main>
+  <!-- ================= HERO + FORMULÁRIO ================= -->
+  <div class="hero">
+    <div class="hero-bg" aria-hidden="true"><img src="img/ped-3-perfil.webp" alt="" id="heroImg"></div>
+    <div class="wrap hero-grid">
+
+      <div class="copy">
+        <span class="kick"><i class="rec"></i>Live de lançamento · Preparatório TEP</span>
+        <h1><span class="l"><span class="grad">TEP</span></span><span class="l"><span>sem mistério</span></span></h1>
+        <p class="sub">Como iniciar sua preparação para o <b>título de especialista em pediatria</b>.</p>
+
+        <div class="when">
+          <div class="cal"><i>NOV</i><b>18</b></div>
+          <div class="when-txt">
+            <span class="d">Quarta-feira · ao vivo</span>
+            <span class="h">19<em>h</em>30</span>
+          </div>
+        </div>
+
+        <div class="count" id="count" aria-live="off">
+          <div><b id="cd">--</b><span>dias</span></div>
+          <div><b id="ch">--</b><span>horas</span></div>
+          <div><b id="cm">--</b><span>min</span></div>
+          <div><b id="cs">--</b><span>seg</span></div>
+        </div>
+      </div>
+
+      <!-- formulário logo no início -->
+      <div class="form-card" id="inscricao">
+        <form id="f" novalidate autocomplete="on">
+          <h2>Garanta sua vaga na live</h2>
+          <p class="lead">Preencha seus dados para participar.</p>
+
+          <label class="field" data-f="nome">
+            <span>Nome completo</span>
+            <div class="ctl">
+              <svg class="ico"><use href="#i-user"/></svg>
+              <input id="nome" name="nome" type="text" placeholder="Seu nome e sobrenome" autocomplete="name" required>
+              <i class="okmark"><svg class="ico"><use href="#i-check"/></svg></i>
+            </div>
+            <div class="msg">Digite seu nome e sobrenome.</div>
+          </label>
+
+          <label class="field" data-f="email">
+            <span>E-mail</span>
+            <div class="ctl">
+              <svg class="ico"><use href="#i-mail"/></svg>
+              <input id="email" name="email" type="email" inputmode="email" placeholder="voce@email.com" autocomplete="email" autocapitalize="off" required>
+              <i class="okmark"><svg class="ico"><use href="#i-check"/></svg></i>
+            </div>
+            <div class="msg">Confira o e-mail digitado.</div>
+          </label>
+
+          <label class="field" data-f="whatsapp">
+            <span>WhatsApp</span>
+            <div class="ctl">
+              <svg class="ico"><use href="#i-phone"/></svg>
+              <input id="whatsapp" name="whatsapp" type="tel" inputmode="numeric" placeholder="(85) 99999-9999" autocomplete="tel-national" maxlength="15" required>
+              <i class="okmark"><svg class="ico"><use href="#i-check"/></svg></i>
+            </div>
+            <div class="msg">Digite o DDD e o número completo.</div>
+          </label>
+
+          <label class="field" data-f="momento">
+            <span>Em que momento você está?</span>
+            <div class="ctl">
+              <svg class="ico"><use href="#i-steth"/></svg>
+              <select id="momento" name="momento" required>
+                <option value="" selected disabled>Selecione uma opção</option>
+                <option>Residente de pediatria</option>
+                <option>Pediatra formado(a) — quero o título</option>
+                <option>Vou prestar o TEP este ano</option>
+                <option>Ainda estou me organizando</option>
+                <option>Outro</option>
+              </select>
+              <svg class="ico chev"><use href="#i-chev"/></svg>
+              <i class="okmark"><svg class="ico"><use href="#i-check"/></svg></i>
+            </div>
+            <div class="msg">Escolha uma opção.</div>
+          </label>
+
+          <label class="chk" id="chkWrap">
+            <input type="checkbox" id="aceite" name="aceite" required>
+            <span class="box"><svg class="ico"><use href="#i-check"/></svg></span>
+            <span>Aceito receber o lembrete e os conteúdos da live por e-mail e WhatsApp.</span>
+          </label>
+
+          <input class="hp" type="text" name="site" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="prog" aria-hidden="true"><i id="prog"></i></div>
+          <button class="btn" id="enviar" type="submit" disabled>
+            <svg class="ico" id="btnIco"><use href="#i-lock"/></svg><span id="btnTxt">Preencha para participar</span>
+          </button>
+          <div class="hint" id="hint">0 de 5 itens preenchidos</div>
+          <div class="err" id="err" role="alert">Não conseguimos enviar agora. Confira sua conexão e tente de novo.</div>
+        </form>
+
+        <div class="ok-card" id="ok" aria-live="polite">
+          <div class="ok-badge"><svg class="ico"><use href="#i-check"/></svg></div>
+          <h3>Você está dentro!</h3>
+          <p>Inscrição confirmada, <b id="okNome"></b>.<br>Fique de olho no e-mail e no WhatsApp: o acesso à live chega por lá.</p>
+          <div class="ok-when"><svg class="ico"><use href="#i-cal"/></svg>Quarta, 18/11 · 19h30</div>
+          <div class="ok-actions">
+            <a class="btn2" id="gcal" target="_blank" rel="noopener"><svg class="ico"><use href="#i-cal"/></svg>Adicionar ao Google Agenda</a>
+            <button class="btn2" id="ics" type="button"><svg class="ico"><use href="#i-down"/></svg>Baixar para outro calendário</button>
+            <a class="btn2 wa" id="grupo" target="_blank" rel="noopener" hidden><svg class="ico"><use href="#i-wa"/></svg>Entrar no grupo do WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- foto delas -->
+      <div class="photo rv">
+        <div class="duo">
+          <img src="img/professoras.jpg" alt="Rebecca Azulay e Natália Dias, pediatras do Ped Talks" width="820" height="720">
+          <span class="pill-live live-chip"><i class="rec"></i>Ao vivo</span>
+          <div class="tags">
+            <div class="tag"><b>Rebecca Azulay</b><span>Médica pediatra</span></div>
+            <div class="tag"><b>Natália Dias</b><span>Pediatra intensivista</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= O QUE VOCÊ VAI VER ================= -->
+  <section>
+    <div class="wrap">
+      <div class="eyebrow rv"><i class="rec"></i>Na live</div>
+      <h2 class="t rv" style="--d:.05s">O que você <span class="grad">vai ver</span></h2>
+      <div class="items">
+        <div class="item rv" style="--d:.05s"><div class="ib"><svg class="ico"><use href="#i-clip"/></svg></div><div><h3>Como é a prova do TEP</h3><p>Formato, pesos e nota de aprovação</p></div></div>
+        <div class="item rv" style="--d:.12s"><div class="ib"><svg class="ico"><use href="#i-target"/></svg></div><div><h3>Os temas mais cobrados</h3><p>Onde vale concentrar o estudo</p></div></div>
+        <div class="item rv" style="--d:.19s"><div class="ib"><svg class="ico"><use href="#i-grow"/></svg></div><div><h3>Os primeiros passos</h3><p>Como começar sua preparação desde já</p></div></div>
+        <div class="item rv" style="--d:.26s"><div class="ib"><svg class="ico"><use href="#i-play"/></svg></div><div><h3>A plataforma por dentro</h3><p>Aulas, banco de questões e flashcards</p></div></div>
+        <div class="item rv" style="--d:.33s"><div class="ib"><svg class="ico"><use href="#i-award"/></svg></div><div><h3>O Preparatório TEP</h3><p>Como funciona a preparação completa</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= QUEM VAI TE GUIAR ================= -->
+  <section style="padding-top:20px">
+    <div class="wrap">
+      <div class="eyebrow rv"><i class="rec"></i>Com quem</div>
+      <h2 class="t rv" style="--d:.05s">Quem vai <span class="grad">te guiar</span></h2>
+      <div class="guide">
+        <div class="prof rv" style="--d:.05s">
+          <img src="img/rebecca.png" alt="Rebecca Azulay" width="150" height="150" loading="lazy">
+          <div><h3>Rebecca Azulay</h3><div class="role">Médica pediatra</div><span class="crm"><svg class="ico"><use href="#i-check"/></svg><span>CRM 23598-CE<br>RQE 18057</span></span></div>
+        </div>
+        <div class="prof rv" style="--d:.14s">
+          <img src="img/natalia.png" alt="Natália Dias" width="150" height="150" loading="lazy">
+          <div><h3>Natália Dias</h3><div class="role">Pediatra intensivista</div><span class="crm"><svg class="ico"><use href="#i-check"/></svg><span>CRM 17603-CE<br>RQE 14787</span></span></div>
+        </div>
+      </div>
+      <div class="rv" style="text-align:center"><span class="rqe"><svg class="ico"><use href="#i-award"/></svg>Pediatras tituladas, com RQE</span></div>
+    </div>
+  </section>
+
+  <!-- ================= CTA FINAL ================= -->
+  <section class="final">
+    <div class="bgimg" aria-hidden="true"></div>
+    <div class="wrap">
+      <h2 class="rv">Quarta, 18/11 · <span class="grad">19h30</span></h2>
+      <p class="rv" style="--d:.08s">Garanta sua vaga e nos vemos lá!</p>
+      <a class="btn rv" style="--d:.14s;text-decoration:none" href="#inscricao" id="ctaFinal"><span>Quero participar da live</span><svg class="ico"><use href="#i-arrow"/></svg></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo-pedtalks.png" alt="Ped Talks">
+    <div>© 2026 Ped Talks · Grupo Talks. Todos os direitos reservados.</div>
+  </div>
+</footer>
+
+<div class="bar" id="bar"><a href="#inscricao"><svg class="ico" style="font-size:22px"><use href="#i-arrow"/></svg>Garantir minha vaga</a></div>
+<canvas id="confete" aria-hidden="true"></canvas>
+
+<script>
+/* ============================================================
+   CONFIGURAÇÃO — preencha quando os links estiverem prontos
+   ============================================================ */
+var CONFIG = {
+  // URL do Web App do Google Apps Script (ou outro endpoint) que recebe a inscrição por POST (JSON).
+  // Vazio = modo demonstração: nada é enviado, a inscrição fica só neste navegador.
+  endpoint: '',
+  // Link do grupo de WhatsApp da live (aparece na tela de confirmação). Vazio = botão escondido.
+  grupoWhatsapp: '',
+  // Início da live (horário de Brasília) e duração em minutos
+  liveInicio: '2026-11-18T19:30:00-03:00',
+  duracaoMin: 60,
+  tituloLive: 'Live: TEP sem mistério · Ped Talks',
+  detalhesLive: 'Como iniciar sua preparação para o título de especialista em pediatria, com Rebecca Azulay e Natália Dias.'
+};
+
+(function () {
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- partículas de fundo ---------- */
+  var fx = $('#fx');
+  for (var i = 0; i < 26; i++) {
+    var d = document.createElement('i'); d.className = 'dot';
+    d.style.left = (Math.random() * 100) + '%'; d.style.top = (Math.random() * 100) + '%';
+    d.style.animationDelay = (-Math.random() * 6) + 's'; d.style.animationDuration = (5 + Math.random() * 5) + 's';
+    var s = 2 + Math.random() * 4; d.style.width = d.style.height = s + 'px';
+    fx.appendChild(d);
+  }
+
+  /* ---------- paralaxe leve no fundo do hero ---------- */
+  var heroImg = $('#heroImg');
+  if (!reduce) window.addEventListener('scroll', function () { heroImg.style.setProperty('--py', (window.scrollY * .18) + 'px'); }, { passive: true });
+
+  /* ---------- entrada ao rolar ---------- */
+  var rv = $$('.rv');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: .12 });
+    rv.forEach(function (el) { io.observe(el); });
+  } else rv.forEach(function (el) { el.classList.add('in'); });
+
+  /* ---------- contagem regressiva ---------- */
+  var alvo = new Date(CONFIG.liveInicio).getTime();
+  function pad(n) { return n < 10 ? '0' + n : '' + n; }
+  function tick() {
+    var ms = alvo - Date.now(), c = $('#count');
+    if (ms <= 0) {
+      var fim = alvo + CONFIG.duracaoMin * 60000 * 2;
+      c.className = 'count done';
+      c.innerHTML = Date.now() < fim ? '<i class="rec" style="display:inline-block;margin-right:10px"></i>A live está acontecendo agora!' : 'A live já aconteceu. Acompanhe as próximas pelo Ped Talks.';
+      return;
+    }
+    var s = Math.floor(ms / 1000);
+    $('#cd').textContent = pad(Math.floor(s / 86400)); $('#ch').textContent = pad(Math.floor(s % 86400 / 3600));
+    $('#cm').textContent = pad(Math.floor(s % 3600 / 60)); $('#cs').textContent = pad(s % 60);
+  }
+  tick(); setInterval(tick, 1000);
+
+  /* ---------- formulário ---------- */
+  var f = $('#f'), btn = $('#enviar'), btnTxt = $('#btnTxt'), btnIco = $('#btnIco').firstElementChild, hint = $('#hint'), prog = $('#prog');
+  var nome = $('#nome'), email = $('#email'), wpp = $('#whatsapp'), mom = $('#momento'), aceite = $('#aceite');
+  var touched = {};
+
+  var regras = {
+    nome: function () { var v = nome.value.trim().replace(/\s+/g, ' '); return v.length >= 5 && v.indexOf(' ') > 0 && v.split(' ')[1].length >= 1; },
+    email: function () { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim()); },
+    whatsapp: function () { var d = wpp.value.replace(/\D/g, ''); return (d.length === 11 && d[2] === '9' || d.length === 10) && d[0] !== '0' && d[1] !== '0'; },
+    momento: function () { return !!mom.value; },
+    aceite: function () { return aceite.checked; }
+  };
+
+  function mascara(v) {
+    var d = v.replace(/\D/g, '').slice(0, 11), o = '';
+    if (d.length > 0) o = '(' + d.slice(0, 2);
+    if (d.length >= 3) o += ') ' + d.slice(2, d.length > 10 ? 7 : 6);
+    if (d.length > (d.length > 10 ? 7 : 6)) o += '-' + d.slice(d.length > 10 ? 7 : 6);
+    return o;
+  }
+
+  function atualiza() {
+    var ok = 0, total = 0;
+    Object.keys(regras).forEach(function (k) {
+      total++; var v = regras[k]();
+      if (v) ok++;
+      var w = $('[data-f="' + k + '"]');
+      if (w) { w.classList.toggle('valid', v); w.classList.toggle('bad', !v && !!touched[k] && k !== 'aceite'); }
+    });
+    var tudo = ok === total;
+    btn.disabled = !tudo;
+    btn.setAttribute('aria-disabled', String(!tudo));
+    btnTxt.textContent = tudo ? 'Quero participar da live' : 'Preencha para participar';
+    btnIco.setAttribute('href', tudo ? '#i-arrow' : '#i-lock');
+    prog.style.width = (ok / total * 100) + '%';
+    hint.textContent = tudo ? 'Tudo certo! Falta só um clique.' : ok + ' de ' + total + ' itens preenchidos';
+  }
+
+  wpp.addEventListener('input', function () { wpp.value = mascara(wpp.value); });
+  [['nome', nome], ['email', email], ['whatsapp', wpp], ['momento', mom]].forEach(function (p) {
+    p[1].addEventListener('input', atualiza);
+    p[1].addEventListener('change', atualiza);
+    p[1].addEventListener('blur', function () { touched[p[0]] = true; atualiza(); });
+  });
+  aceite.addEventListener('change', atualiza);
+  atualiza();
+
+  /* UTMs para saber de onde veio a inscrição */
+  var qs = new URLSearchParams(location.search), utm = {};
+  ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(function (k) { if (qs.get(k)) utm[k] = qs.get(k); });
+
+  f.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    if (btn.disabled || f.site.value) return;
+    var dados = {
+      nome: nome.value.trim().replace(/\s+/g, ' '), email: email.value.trim().toLowerCase(), whatsapp: wpp.value.replace(/\D/g, ''),
+      momento: mom.value, aceite: true, evento: 'live-lancamento-tep', enviadoEm: new Date().toISOString(), pagina: location.origin + location.pathname
+    };
+    for (var k in utm) dados[k] = utm[k];
+    btn.disabled = true; btnTxt.textContent = 'Enviando…'; $('#err').classList.remove('on');
+
+    var envio;
+    if (CONFIG.endpoint) {
+      envio = fetch(CONFIG.endpoint, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(dados) });
+    } else {
+      try { var L = JSON.parse(localStorage.getItem('liveTepInscricoes') || '[]'); L.push(dados); localStorage.setItem('liveTepInscricoes', JSON.stringify(L)); } catch (e) {}
+      console.info('[Modo demonstração] CONFIG.endpoint está vazio; inscrição não enviada a nenhum servidor.', dados);
+      envio = new Promise(function (r) { setTimeout(r, 700); });
+    }
+    envio.then(function () { sucesso(dados); }).catch(function () {
+      $('#err').classList.add('on'); btn.disabled = false; atualiza();
+    });
+  });
+
+  /* ---------- sucesso, agenda e confete ---------- */
+  function utcStamp(t) { return new Date(t).toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, ''); }
+  function sucesso(d) {
+    var ini = alvo, fim = alvo + CONFIG.duracaoMin * 60000;
+    $('#okNome').textContent = d.nome.split(' ')[0];
+    $('#gcal').href = 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + encodeURIComponent(CONFIG.tituloLive) +
+      '&dates=' + utcStamp(ini) + '/' + utcStamp(fim) + '&details=' + encodeURIComponent(CONFIG.detalhesLive) + '&ctz=America/Fortaleza';
+    if (CONFIG.grupoWhatsapp) { var g = $('#grupo'); g.href = CONFIG.grupoWhatsapp; g.hidden = false; }
+    f.style.display = 'none'; $('#ok').classList.add('on');
+    $('#inscricao').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+    if (!reduce) confete();
+  }
+  $('#ics').addEventListener('click', function () {
+    var ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Ped Talks//Live TEP//PT', 'BEGIN:VEVENT', 'UID:live-tep-' + alvo + '@pedtalks',
+      'DTSTAMP:' + utcStamp(Date.now()), 'DTSTART:' + utcStamp(alvo), 'DTEND:' + utcStamp(alvo + CONFIG.duracaoMin * 60000),
+      'SUMMARY:' + CONFIG.tituloLive, 'DESCRIPTION:' + CONFIG.detalhesLive, 'BEGIN:VALARM', 'TRIGGER:-PT30M', 'ACTION:DISPLAY', 'DESCRIPTION:A live começa em 30 minutos', 'END:VALARM',
+      'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
+    var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' })); a.download = 'live-tep-sem-misterio.ics';
+    document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+  });
+
+  function confete() {
+    var c = $('#confete'), x = c.getContext('2d'), W = c.width = innerWidth, H = c.height = innerHeight, P = [], cores = ['#0074F2', '#2A8CFF', '#8CC6FF', '#F6F6F7', '#FF3B4E'];
+    for (var i = 0; i < 150; i++) P.push({ x: W / 2 + (Math.random() - .5) * 120, y: H * .55, vx: (Math.random() - .5) * 16, vy: -Math.random() * 18 - 6, s: 6 + Math.random() * 7, r: Math.random() * 6, vr: (Math.random() - .5) * .4, c: cores[i % cores.length] });
+    var t0 = performance.now();
+    (function loop(t) {
+      var k = (t - t0) / 2600; x.clearRect(0, 0, W, H);
+      P.forEach(function (p) { p.vy += .45; p.x += p.vx; p.y += p.vy; p.vx *= .99; p.r += p.vr; x.save(); x.globalAlpha = Math.max(0, 1 - k); x.translate(p.x, p.y); x.rotate(p.r); x.fillStyle = p.c; x.fillRect(-p.s / 2, -p.s / 4, p.s, p.s / 2); x.restore(); });
+      if (k < 1) requestAnimationFrame(loop); else x.clearRect(0, 0, W, H);
+    })(t0);
+  }
+
+  /* ---------- barra fixa no celular: aparece depois do topo e some quando o formulário está à vista ---------- */
+  var bar = $('#bar'), card = $('#inscricao'), cardVisivel = false, finalVisivel = false;
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) { cardVisivel = es[0].isIntersecting; checa(); }, { threshold: .15 }).observe(card);
+    new IntersectionObserver(function (es) { finalVisivel = es[0].isIntersecting; checa(); }, { threshold: .25 }).observe($('.final'));
+  }
+  function checa() { bar.classList.toggle('on', window.scrollY > 520 && !cardVisivel && !finalVisivel &&!$('#ok').classList.contains('on')); }
+  window.addEventListener('scroll', checa, { passive: true }); checa();
+})();
+</script>
+</body>
+</html>
